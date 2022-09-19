@@ -1,25 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
+import { Route, NavLink } from 'react-router-dom'
+import FormComponent from './asserts/FormComponent'
+import TableComponent from './asserts/TableComponent'
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <>
+      <h2>
+        <NavLink to="/">Form</NavLink> | <NavLink to="/table">Table</NavLink>
+      </h2>
+
+      <Route exact path="/" component={FormComponent} />
+      <Route path="/table" component={TableComponent} />
+    </>
+  )
 }
 
-export default App;
+export default App
