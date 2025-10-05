@@ -1,5 +1,5 @@
-import { Route, NavLink } from 'react-router-dom'
-import FormComponent from './asserts/FormComponent'
+import { NavLink, Route } from 'react-router-dom'
+import FormComponent from './asserts/FormComponents'
 import TableComponent from './asserts/TableComponent'
 
 const App = () => {
